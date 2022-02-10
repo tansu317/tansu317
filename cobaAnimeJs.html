@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+            margin-top: 250px;
+            margin-left: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="demo-wrapper">
+        <div class="square" style="background-color: brown; height: 10px; width: 10px;">
+        
+        </div>
+       
+    </div>
+    <div class="begin-complete-demo" style="background-color: lightblue; border-radius: 50px; height: 30px; width: 30px;">
+    
+    </div>
+    <script src="anime-master/lib/anime.min.js"></script>
+    <script src="anime-master/build.js"></script>
+    <script>
+        anime({
+            targets: '.square',
+            translateX: 250,
+            rotateZ: 360,
+            scale: 3,
+            duration: 3000,
+            loop: true
+
+        })
+
+        // anime({
+        //     targets: '.begin-complete-demo',
+        //     translateX: 240,
+        //     delay: 1000,
+        //     easing: 'easeInOutCirc',
+        //     update: function(anim) {
+        //         progressLogEl.value = 'progress : ' + Math.round(anim.progress) + '%';
+        //         beginLogEl.value = 'began : ' + anim.began;
+        //         completeLogEl.value = 'completed : ' + anim.completed;
+        //     },
+        //     begin: function(anim) {
+        //         beginLogEl.value = 'began : ' + anim.began;
+        //     },
+        //     complete: function(anim) {
+        //         completeLogEl.value = 'completed : ' + anim.completed;
+        //     }
+        // });
+    </script>
+</body>
+</html>

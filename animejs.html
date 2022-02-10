@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="anime.min.js"></script>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .demo-wrapper{
+            position: relative;
+        }
+
+        #emoji{
+            font-size: 10px;
+            position: absolute;
+        
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="demo-wrapper">
+        <div id="emoji">emoji</div>
+        <svg id="demo-svg" width="1000" height="500">
+            <path stroke="black" fill="none" d="M 141 332 L 241 205 L 273 324 L 388 133 L 421 283 L 462 129 L 494 316 L 567 265 L 614 360 Z"></path>
+        </svg>
+    </div>
+    
+    <script>
+        let path = anime.path('#demo-svg path')
+
+        anime({
+            targets: '#emoji',
+            translateX: path('x'),
+            translateY: path('y'),
+            easing: 'linear',
+            duration: 5000,
+            loop: true
+        })
+    </script>
+</body>
+</html>
